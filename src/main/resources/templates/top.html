@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="UTF-8">
-<title>トップ</title>
+	<meta charset="UTF-8">
+	<title>トップ</title>
 </head>
+
 <body>
-<h1>トップ画面</h1>
-<div>
-	<label>ID:</label>
-	<span th:text="${id}"></span>
-</div>
+	<strong>ログインユーザー</strong>
+	<div>
+		<label>ID:</label>
+		<span th:text="${loginUser.userId}"></span>
+	</div>
+	<div>
+		<label>Name:</label>
+		<span th:text="${loginUser.userName}"></span>
+	</div>
+	<div style="margin-top: 30px;">
+		<strong>ユーザ一覧</strong>
+		<table style="border: 1px solid rgb(0, 0, 0);">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>名前</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="user : ${userList}" th:object="${user}">
+					<td th:text="*{userId}"></td>
+					<td th:text="*{userName}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </body>
+
 </html>
