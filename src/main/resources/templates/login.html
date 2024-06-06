@@ -9,7 +9,7 @@
 <form th:action="@{/login}" method="post" th:object="${loginForm}">
 	<div>
 		<label>ID</label>
-		<input type="text" th:field="*{id}">
+		<input type="number" th:field="*{id}">
 	</div>
 	<div>
 		<label>PASS</label>

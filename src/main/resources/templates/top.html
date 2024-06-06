@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
 	<meta charset="UTF-8">
+	<style>
+	    table {
+	        width: 300px;
+	        border-collapse: collapse;
+	    }
+	    table, th, td {
+	        border: 1px solid black;
+	    }
+	</style>
 	<title>トップ</title>
 </head>
 
@@ -18,7 +26,7 @@
 	</div>
 	<div style="margin-top: 30px;">
 		<strong>ユーザ一覧</strong>
-		<table style="border: 1px solid rgb(0, 0, 0);">
+		<table>
 			<thead>
 				<tr>
 					<th>ID</th>
